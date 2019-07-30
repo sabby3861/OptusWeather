@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D846F38B22F05CC30030FD64 /* OPWeatherListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D846F38A22F05CC30030FD64 /* OPWeatherListViewController.swift */; };
 		D862547A22EF120100EEF72A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D862547922EF120100EEF72A /* AppDelegate.swift */; };
-		D862547C22EF120100EEF72A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D862547B22EF120100EEF72A /* ViewController.swift */; };
 		D862547F22EF120100EEF72A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D862547D22EF120100EEF72A /* Main.storyboard */; };
 		D862548222EF120100EEF72A /* OptusWeather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D862548022EF120100EEF72A /* OptusWeather.xcdatamodeld */; };
 		D862548422EF120200EEF72A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D862548322EF120200EEF72A /* Assets.xcassets */; };
@@ -27,9 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D846F38A22F05CC30030FD64 /* OPWeatherListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPWeatherListViewController.swift; sourceTree = "<group>"; };
 		D862547622EF120100EEF72A /* OptusWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptusWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D862547922EF120100EEF72A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D862547B22EF120100EEF72A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D862547E22EF120100EEF72A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D862548122EF120100EEF72A /* OptusWeather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OptusWeather.xcdatamodel; sourceTree = "<group>"; };
 		D862548322EF120200EEF72A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				D862547922EF120100EEF72A /* AppDelegate.swift */,
-				D862547B22EF120100EEF72A /* ViewController.swift */,
+				D846F38A22F05CC30030FD64 /* OPWeatherListViewController.swift */,
 				D862547D22EF120100EEF72A /* Main.storyboard */,
 				D862548322EF120200EEF72A /* Assets.xcassets */,
 				D862548522EF120200EEF72A /* LaunchScreen.storyboard */,
@@ -200,8 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D862547C22EF120100EEF72A /* ViewController.swift in Sources */,
 				D862548222EF120100EEF72A /* OptusWeather.xcdatamodeld in Sources */,
+				D846F38B22F05CC30030FD64 /* OPWeatherListViewController.swift in Sources */,
 				D862547A22EF120100EEF72A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
