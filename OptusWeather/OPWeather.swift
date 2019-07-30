@@ -10,10 +10,6 @@ import Foundation
 import CoreData
 
  class OPWeather: NSManagedObject, Codable {
-    /*public let id: Int
-    public let visibility: Int?
-    public let name: String?*/
-    
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case visibility = "visibility"
@@ -29,8 +25,8 @@ import CoreData
     required convenience init(from decoder: Decoder) throws {
         guard let codingUserInfoKeyManagedObjectContext = CodingUserInfoKey.managedObjectContext,
             let managedObjectContext = decoder.userInfo[codingUserInfoKeyManagedObjectContext] as? NSManagedObjectContext,
-            let entity = NSEntityDescription.entity(forEntityName: GJCoreData.name.rawValue, in: managedObjectContext) else {
-                fatalError("Failed to decode Contacts")
+            let entity = NSEntityDescription.entity(forEntityName: OPCoreData.name.rawValue, in: managedObjectContext) else {
+                fatalError("Failed to decode Weather info")
         }
         
         self.init(entity: entity, insertInto: managedObjectContext)
@@ -56,6 +52,6 @@ public extension CodingUserInfoKey {
     static let managedObjectContext = CodingUserInfoKey(rawValue: "managedObjectContext")
 }
 
-enum GJCoreData: String {
+enum OPCoreData: String {
     case name = "OPWeatherInfo"
 }
