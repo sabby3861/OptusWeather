@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D846F38B22F05CC30030FD64 /* OPWeatherListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D846F38A22F05CC30030FD64 /* OPWeatherListViewController.swift */; };
+		D846F38D22F061140030FD64 /* OPWeatherListViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D846F38C22F061140030FD64 /* OPWeatherListViewProtocols.swift */; };
+		D846F38F22F06F610030FD64 /* OPWeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D846F38E22F06F610030FD64 /* OPWeatherApi.swift */; };
+		D846F39122F06FDC0030FD64 /* OPWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D846F39022F06FDC0030FD64 /* OPWeather.swift */; };
+		D846F39322F073A80030FD64 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D846F39222F073A80030FD64 /* URLSessionProtocol.swift */; };
 		D862547A22EF120100EEF72A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D862547922EF120100EEF72A /* AppDelegate.swift */; };
 		D862547F22EF120100EEF72A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D862547D22EF120100EEF72A /* Main.storyboard */; };
 		D862548222EF120100EEF72A /* OptusWeather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D862548022EF120100EEF72A /* OptusWeather.xcdatamodeld */; };
@@ -28,6 +32,10 @@
 
 /* Begin PBXFileReference section */
 		D846F38A22F05CC30030FD64 /* OPWeatherListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPWeatherListViewController.swift; sourceTree = "<group>"; };
+		D846F38C22F061140030FD64 /* OPWeatherListViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPWeatherListViewProtocols.swift; sourceTree = "<group>"; };
+		D846F38E22F06F610030FD64 /* OPWeatherApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPWeatherApi.swift; sourceTree = "<group>"; };
+		D846F39022F06FDC0030FD64 /* OPWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPWeather.swift; sourceTree = "<group>"; };
+		D846F39222F073A80030FD64 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		D862547622EF120100EEF72A /* OptusWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptusWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D862547922EF120100EEF72A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D862547E22EF120100EEF72A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,6 +89,10 @@
 			children = (
 				D862547922EF120100EEF72A /* AppDelegate.swift */,
 				D846F38A22F05CC30030FD64 /* OPWeatherListViewController.swift */,
+				D846F38C22F061140030FD64 /* OPWeatherListViewProtocols.swift */,
+				D846F38E22F06F610030FD64 /* OPWeatherApi.swift */,
+				D846F39022F06FDC0030FD64 /* OPWeather.swift */,
+				D846F39222F073A80030FD64 /* URLSessionProtocol.swift */,
 				D862547D22EF120100EEF72A /* Main.storyboard */,
 				D862548322EF120200EEF72A /* Assets.xcassets */,
 				D862548522EF120200EEF72A /* LaunchScreen.storyboard */,
@@ -200,9 +212,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D846F39322F073A80030FD64 /* URLSessionProtocol.swift in Sources */,
+				D846F38D22F061140030FD64 /* OPWeatherListViewProtocols.swift in Sources */,
 				D862548222EF120100EEF72A /* OptusWeather.xcdatamodeld in Sources */,
 				D846F38B22F05CC30030FD64 /* OPWeatherListViewController.swift in Sources */,
 				D862547A22EF120100EEF72A /* AppDelegate.swift in Sources */,
+				D846F38F22F06F610030FD64 /* OPWeatherApi.swift in Sources */,
+				D846F39122F06FDC0030FD64 /* OPWeather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
