@@ -31,7 +31,7 @@ class OPWeatherListViewController: UITableViewController, OPWeatherListViewProto
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        self.presenter?.fetchContactsInformation()
+        self.presenter?.fetchWeatherInformation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,13 +61,15 @@ class OPWeatherListViewController: UITableViewController, OPWeatherListViewProto
             fatalError("Unable to allocate the cell")
         }
         // Configure the cell...
-
-        print(weatherInfo[indexPath.row].main)
         print(weatherInfo[indexPath.row].weatherCondition)
         cell.updateCell(data: weatherInfo[indexPath.row])
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        presenter?.sendDataToWeatherDetailView(info: weatherInfo[indexPath.row])
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -115,5 +117,4 @@ class OPWeatherListViewController: UITableViewController, OPWeatherListViewProto
     */
 
 }
-
 

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ConversionService {
+class OPConversionService {
     
     public static func weatherConditionSymbol(fromWeathercode: Int32) -> String {
         switch fromWeathercode {
@@ -67,4 +68,9 @@ extension UIColor {
         }
     }
 
+    open class var nearbyWeatherNight: UIColor {
+        get {
+            return UIColor(red: 50/255, green: 113/255, blue: 156/255, alpha: 1.0)
+        }
+    }
 }

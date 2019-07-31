@@ -12,12 +12,12 @@ class OPWeatherListPresenter: OPWeatherListPresenterProtocol {
     var router: OPWeatherListRouterProtocol?
     var interactor: OPWeatherListInteractorProtocol?
     
-    func fetchContactsInformation() {
+    func fetchWeatherInformation() {
         interactor?.decodeJSONInformation()
     }
     
-    func sendDataToWeatherDetailView(info: [OPWeather]) {
-        
+    func sendDataToWeatherDetailView(info: OPWeather) {
+        router?.showWeatherDetailView(with: info)
     }
 }
 

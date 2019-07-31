@@ -18,7 +18,7 @@ class OPWeatherListInteractor: OPWeatherListInteractorProtocol {
                 print("Result is \(results)")
                 self.output?.weatherInfoDidFetch(weatherInfo: results.list)
             case .error(let error):
-                print("Result is \(error)")
+                print("Result is \(String(describing: error))")
             }
         }
     }

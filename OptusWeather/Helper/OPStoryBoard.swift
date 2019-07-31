@@ -45,3 +45,4 @@ extension StoryboardIdentifiable where Self: UIViewController {
 }
 
 extension UIViewController: StoryboardIdentifiable{}
+let kWeatherDataLastRefreshDateKey = "techm.weatherDataService.lastUpdateDate"

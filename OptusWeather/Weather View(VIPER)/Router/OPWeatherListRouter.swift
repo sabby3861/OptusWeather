@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 class OPWeatherListRouter: OPWeatherListRouterProtocol {
     var viewController: OPWeatherListViewController?
     
@@ -23,5 +24,11 @@ class OPWeatherListRouter: OPWeatherListRouterProtocol {
         router.viewController = view
     }
     
+    func showWeatherDetailView(with info: OPWeather){
+        let storyboard = UIStoryboard.storyboard(storyboard: .Main)
+        let view: OPWeatherDetailViewController = storyboard.instantiateVieController()
+        _ = OPWeatherDetailRouter.assembleModule(view: view, info: info)
+        viewController?.navigationController?.pushViewController(view, animated: true)
+    }
     
 }

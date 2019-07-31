@@ -17,10 +17,10 @@ class OPCitiesListTableCell: UITableViewCell {
     
     func updateCell(data: OPWeather)  {
         cityNameLabel.text = data.name
-        tempLabel.text =  ("\(data.main.temp) °C")
+        tempLabel.text =  ("\(data.main?.temp ?? 0) °C")
         let weatherCondition = data.weatherCondition.first
         if let id = Int32?((weatherCondition?.id)!)! {
-            weatherLabel.text = ConversionService.weatherConditionSymbol(fromWeathercode: id)
+            weatherLabel.text = OPConversionService.weatherConditionSymbol(fromWeathercode: id)
         }
         let bubbleColor: UIColor =  .nearbyWeatherStandard 
         backgroundColorView.layer.cornerRadius = 5.0

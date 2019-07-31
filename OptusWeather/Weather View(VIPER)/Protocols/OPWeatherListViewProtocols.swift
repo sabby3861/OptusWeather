@@ -20,8 +20,8 @@ protocol OPWeatherListPresenterProtocol: class
     var view: OPWeatherListViewProtocol? { get }
     var router: OPWeatherListRouterProtocol? { get }
     var interactor: OPWeatherListInteractorProtocol?{get}
-    func fetchContactsInformation()
-    func sendDataToWeatherDetailView(info: [OPWeather])
+    func fetchWeatherInformation()
+    func sendDataToWeatherDetailView(info: OPWeather)
 }
 
 
@@ -43,4 +43,5 @@ protocol OPWeatherListRouterProtocol: class
 {
     var viewController: OPWeatherListViewController? { get}
     static func assembleModule(view: OPWeatherListViewController)
+    func showWeatherDetailView(with Info: OPWeather)
 }
