@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D802C19B22F2241D00C6FC88 /* OPWeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802C19A22F2241D00C6FC88 /* OPWeatherTableViewCell.swift */; };
+		D802C1B222F2266100C6FC88 /* OPConversionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802C19F22F2266000C6FC88 /* OPConversionService.swift */; };
+		D802C1B322F2266100C6FC88 /* OPWeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802C1A022F2266000C6FC88 /* OPWeatherApi.swift */; };
+		D802C1B422F2266100C6FC88 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802C1A122F2266000C6FC88 /* URLSessionProtocol.swift */; };
+		D802C1B522F2266100C6FC88 /* OPMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802C1A422F2266000C6FC88 /* OPMain.swift */; };
+		D802C1B622F2266100C6FC88 /* OPWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802C1A522F2266000C6FC88 /* OPWeather.swift */; };
+		D802C1B722F2266100C6FC88 /* OPWeatherCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802C1A622F2266000C6FC88 /* OPWeatherCondition.swift */; };
+		D802C1B822F2266100C6FC88 /* OPWeatherListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802C1A822F2266000C6FC88 /* OPWeatherListInteractor.swift */; };
+		D802C1B922F2266100C6FC88 /* OPWeatherListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802C1AA22F2266000C6FC88 /* OPWeatherListPresenter.swift */; };
+		D802C1BA22F2266100C6FC88 /* OPWeatherListViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802C1AC22F2266000C6FC88 /* OPWeatherListViewProtocols.swift */; };
+		D802C1BB22F2266100C6FC88 /* OPWeatherListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802C1AE22F2266000C6FC88 /* OPWeatherListRouter.swift */; };
+		D802C1BC22F2266100C6FC88 /* OPCitiesListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802C1B022F2266000C6FC88 /* OPCitiesListTableCell.swift */; };
+		D802C1BD22F2266100C6FC88 /* OPWeatherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802C1B122F2266000C6FC88 /* OPWeatherDetailViewController.swift */; };
 		D846F38B22F05CC30030FD64 /* OPWeatherListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D846F38A22F05CC30030FD64 /* OPWeatherListViewController.swift */; };
-		D846F38D22F061140030FD64 /* OPWeatherListViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D846F38C22F061140030FD64 /* OPWeatherListViewProtocols.swift */; };
-		D846F38F22F06F610030FD64 /* OPWeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D846F38E22F06F610030FD64 /* OPWeatherApi.swift */; };
-		D846F39122F06FDC0030FD64 /* OPWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D846F39022F06FDC0030FD64 /* OPWeather.swift */; };
-		D846F39322F073A80030FD64 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D846F39222F073A80030FD64 /* URLSessionProtocol.swift */; };
 		D862547A22EF120100EEF72A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D862547922EF120100EEF72A /* AppDelegate.swift */; };
 		D862547F22EF120100EEF72A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D862547D22EF120100EEF72A /* Main.storyboard */; };
-		D862548222EF120100EEF72A /* OptusWeather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D862548022EF120100EEF72A /* OptusWeather.xcdatamodeld */; };
 		D862548422EF120200EEF72A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D862548322EF120200EEF72A /* Assets.xcassets */; };
 		D862548722EF120200EEF72A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D862548522EF120200EEF72A /* LaunchScreen.storyboard */; };
 		D862549222EF120200EEF72A /* OptusWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D862549122EF120200EEF72A /* OptusWeatherTests.swift */; };
@@ -31,15 +39,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D802C19A22F2241D00C6FC88 /* OPWeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPWeatherTableViewCell.swift; sourceTree = "<group>"; };
+		D802C19F22F2266000C6FC88 /* OPConversionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPConversionService.swift; sourceTree = "<group>"; };
+		D802C1A022F2266000C6FC88 /* OPWeatherApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPWeatherApi.swift; sourceTree = "<group>"; };
+		D802C1A122F2266000C6FC88 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		D802C1A422F2266000C6FC88 /* OPMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPMain.swift; sourceTree = "<group>"; };
+		D802C1A522F2266000C6FC88 /* OPWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPWeather.swift; sourceTree = "<group>"; };
+		D802C1A622F2266000C6FC88 /* OPWeatherCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPWeatherCondition.swift; sourceTree = "<group>"; };
+		D802C1A822F2266000C6FC88 /* OPWeatherListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPWeatherListInteractor.swift; sourceTree = "<group>"; };
+		D802C1AA22F2266000C6FC88 /* OPWeatherListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPWeatherListPresenter.swift; sourceTree = "<group>"; };
+		D802C1AC22F2266000C6FC88 /* OPWeatherListViewProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPWeatherListViewProtocols.swift; sourceTree = "<group>"; };
+		D802C1AE22F2266000C6FC88 /* OPWeatherListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPWeatherListRouter.swift; sourceTree = "<group>"; };
+		D802C1B022F2266000C6FC88 /* OPCitiesListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPCitiesListTableCell.swift; sourceTree = "<group>"; };
+		D802C1B122F2266000C6FC88 /* OPWeatherDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPWeatherDetailViewController.swift; sourceTree = "<group>"; };
 		D846F38A22F05CC30030FD64 /* OPWeatherListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPWeatherListViewController.swift; sourceTree = "<group>"; };
-		D846F38C22F061140030FD64 /* OPWeatherListViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPWeatherListViewProtocols.swift; sourceTree = "<group>"; };
-		D846F38E22F06F610030FD64 /* OPWeatherApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPWeatherApi.swift; sourceTree = "<group>"; };
-		D846F39022F06FDC0030FD64 /* OPWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPWeather.swift; sourceTree = "<group>"; };
-		D846F39222F073A80030FD64 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		D862547622EF120100EEF72A /* OptusWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptusWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D862547922EF120100EEF72A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D862547E22EF120100EEF72A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D862548122EF120100EEF72A /* OptusWeather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OptusWeather.xcdatamodel; sourceTree = "<group>"; };
 		D862548322EF120200EEF72A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D862548622EF120200EEF72A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D862548822EF120200EEF72A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,6 +82,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D802C19E22F2266000C6FC88 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D802C19F22F2266000C6FC88 /* OPConversionService.swift */,
+				D802C1A022F2266000C6FC88 /* OPWeatherApi.swift */,
+				D802C1A122F2266000C6FC88 /* URLSessionProtocol.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		D802C1A222F2266000C6FC88 /* Weather View(VIPER) */ = {
+			isa = PBXGroup;
+			children = (
+				D802C1A322F2266000C6FC88 /* Entity */,
+				D802C1A722F2266000C6FC88 /* Interactor */,
+				D802C1A922F2266000C6FC88 /* Presenter */,
+				D802C1AB22F2266000C6FC88 /* Protocols */,
+				D802C1AD22F2266000C6FC88 /* Router */,
+				D802C1AF22F2266000C6FC88 /* View */,
+			);
+			path = "Weather View(VIPER)";
+			sourceTree = "<group>";
+		};
+		D802C1A322F2266000C6FC88 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D802C1A422F2266000C6FC88 /* OPMain.swift */,
+				D802C1A522F2266000C6FC88 /* OPWeather.swift */,
+				D802C1A622F2266000C6FC88 /* OPWeatherCondition.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D802C1A722F2266000C6FC88 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D802C1A822F2266000C6FC88 /* OPWeatherListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D802C1A922F2266000C6FC88 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D802C1AA22F2266000C6FC88 /* OPWeatherListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D802C1AB22F2266000C6FC88 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D802C1AC22F2266000C6FC88 /* OPWeatherListViewProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D802C1AD22F2266000C6FC88 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D802C1AE22F2266000C6FC88 /* OPWeatherListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		D802C1AF22F2266000C6FC88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D802C1B022F2266000C6FC88 /* OPCitiesListTableCell.swift */,
+				D802C1B122F2266000C6FC88 /* OPWeatherDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D862546D22EF120100EEF72A = {
 			isa = PBXGroup;
 			children = (
@@ -88,16 +178,14 @@
 			isa = PBXGroup;
 			children = (
 				D862547922EF120100EEF72A /* AppDelegate.swift */,
+				D802C19E22F2266000C6FC88 /* Helper */,
+				D802C1A222F2266000C6FC88 /* Weather View(VIPER) */,
 				D846F38A22F05CC30030FD64 /* OPWeatherListViewController.swift */,
-				D846F38C22F061140030FD64 /* OPWeatherListViewProtocols.swift */,
-				D846F38E22F06F610030FD64 /* OPWeatherApi.swift */,
-				D846F39022F06FDC0030FD64 /* OPWeather.swift */,
-				D846F39222F073A80030FD64 /* URLSessionProtocol.swift */,
+				D802C19A22F2241D00C6FC88 /* OPWeatherTableViewCell.swift */,
 				D862547D22EF120100EEF72A /* Main.storyboard */,
 				D862548322EF120200EEF72A /* Assets.xcassets */,
 				D862548522EF120200EEF72A /* LaunchScreen.storyboard */,
 				D862548822EF120200EEF72A /* Info.plist */,
-				D862548022EF120100EEF72A /* OptusWeather.xcdatamodeld */,
 			);
 			path = OptusWeather;
 			sourceTree = "<group>";
@@ -212,13 +300,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D846F39322F073A80030FD64 /* URLSessionProtocol.swift in Sources */,
-				D846F38D22F061140030FD64 /* OPWeatherListViewProtocols.swift in Sources */,
-				D862548222EF120100EEF72A /* OptusWeather.xcdatamodeld in Sources */,
+				D802C1B422F2266100C6FC88 /* URLSessionProtocol.swift in Sources */,
+				D802C1B322F2266100C6FC88 /* OPWeatherApi.swift in Sources */,
+				D802C1B922F2266100C6FC88 /* OPWeatherListPresenter.swift in Sources */,
+				D802C1B622F2266100C6FC88 /* OPWeather.swift in Sources */,
+				D802C1BB22F2266100C6FC88 /* OPWeatherListRouter.swift in Sources */,
+				D802C1B822F2266100C6FC88 /* OPWeatherListInteractor.swift in Sources */,
+				D802C1BA22F2266100C6FC88 /* OPWeatherListViewProtocols.swift in Sources */,
+				D802C1BD22F2266100C6FC88 /* OPWeatherDetailViewController.swift in Sources */,
+				D802C1B522F2266100C6FC88 /* OPMain.swift in Sources */,
+				D802C1B722F2266100C6FC88 /* OPWeatherCondition.swift in Sources */,
+				D802C19B22F2241D00C6FC88 /* OPWeatherTableViewCell.swift in Sources */,
 				D846F38B22F05CC30030FD64 /* OPWeatherListViewController.swift in Sources */,
 				D862547A22EF120100EEF72A /* AppDelegate.swift in Sources */,
-				D846F38F22F06F610030FD64 /* OPWeatherApi.swift in Sources */,
-				D846F39122F06FDC0030FD64 /* OPWeather.swift in Sources */,
+				D802C1B222F2266100C6FC88 /* OPConversionService.swift in Sources */,
+				D802C1BC22F2266100C6FC88 /* OPCitiesListTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,19 +575,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		D862548022EF120100EEF72A /* OptusWeather.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				D862548122EF120100EEF72A /* OptusWeather.xcdatamodel */,
-			);
-			currentVersion = D862548122EF120100EEF72A /* OptusWeather.xcdatamodel */;
-			path = OptusWeather.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = D862546E22EF120100EEF72A /* Project object */;
 }

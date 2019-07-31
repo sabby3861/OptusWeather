@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="OPWeatherInfo" representedClassName="OPWeatherInfo" syncable="YES">
+    <entity name="OPMain" representedClassName=".OPMain" syncable="YES">
+        <attribute name="temp" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="OPWeather" representedClassName=".OPWeather" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="visibility" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="main" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OPMain" syncable="YES"/>
+        <relationship name="weatherCondition" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OSWeatherCondition" syncable="YES"/>
+    </entity>
+    <entity name="OSWeatherCondition" representedClassName=".OSWeatherCondition" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="OPWeatherInfo" positionX="-63" positionY="-18" width="128" height="30"/>
+        <element name="OPMain" positionX="-63" positionY="-27" width="128" height="30"/>
+        <element name="OPWeather" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="OSWeatherCondition" positionX="-54" positionY="18" width="128" height="60"/>
     </elements>
 </model>
