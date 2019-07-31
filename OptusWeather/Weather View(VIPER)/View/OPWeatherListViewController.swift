@@ -9,15 +9,20 @@
 import UIKit
 
 class OPWeatherListViewController: UITableViewController, OPWeatherListViewProtocol {
+    private var activity = OPActivityView()
+    
     func showWeatherInformation(with info: [OPWeather]) {
         weatherInfo = info
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            self.activity.removeActivity()
         }
     }
     
     func removeActivityView() {
-        
+        DispatchQueue.main.async {
+            self.activity.removeActivity()
+        }
     }
     
 
@@ -31,6 +36,7 @@ class OPWeatherListViewController: UITableViewController, OPWeatherListViewProto
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        activity.showActivityIndicatory(view: self.view, "Fetching Weather Info")
         self.presenter?.fetchWeatherInformation()
     }
 

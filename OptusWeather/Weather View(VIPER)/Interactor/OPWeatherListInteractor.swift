@@ -15,10 +15,12 @@ class OPWeatherListInteractor: OPWeatherListInteractorProtocol {
         weatherApi.getWeatherFor(cityId: ["4163971","2147714","2174003"]) { [unowned self] result in
             switch result {
             case .success(let results):
-                print("Result is \(results)")
+                UserDefaults.standard.set(Date(), forKey: kWeatherDataLastRefreshDateKey)
                 self.output?.weatherInfoDidFetch(weatherInfo: results.list)
             case .error(let error):
-                print("Result is \(String(describing: error))")
+                DispatchQueue.main.async {
+                    OPAlertViewController.showAlert(withTitle: "Error", message:  String(describing: error))
+                }
             }
         }
     }
