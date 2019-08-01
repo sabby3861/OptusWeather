@@ -16,6 +16,7 @@
 		64E78FD622F2E48C0062B737 /* OPCitySearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E78FCC22F2E48B0062B737 /* OPCitySearchProtocols.swift */; };
 		64E78FD722F2E48C0062B737 /* OPCitySearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E78FCE22F2E48B0062B737 /* OPCitySearchInteractor.swift */; };
 		64E78FD822F2E48C0062B737 /* OPCityRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E78FD022F2E48B0062B737 /* OPCityRouter.swift */; };
+		64E78FDA22F2ECB90062B737 /* OPCellAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E78FD922F2ECB90062B737 /* OPCellAnimation.swift */; };
 		D802C1B222F2266100C6FC88 /* OPConversionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802C19F22F2266000C6FC88 /* OPConversionService.swift */; };
 		D802C1B322F2266100C6FC88 /* OPWeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802C1A022F2266000C6FC88 /* OPWeatherApi.swift */; };
 		D802C1B422F2266100C6FC88 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802C1A122F2266000C6FC88 /* URLSessionProtocol.swift */; };
@@ -61,6 +62,7 @@
 		64E78FCC22F2E48B0062B737 /* OPCitySearchProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPCitySearchProtocols.swift; sourceTree = "<group>"; };
 		64E78FCE22F2E48B0062B737 /* OPCitySearchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPCitySearchInteractor.swift; sourceTree = "<group>"; };
 		64E78FD022F2E48B0062B737 /* OPCityRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPCityRouter.swift; sourceTree = "<group>"; };
+		64E78FD922F2ECB90062B737 /* OPCellAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPCellAnimation.swift; sourceTree = "<group>"; };
 		D802C19F22F2266000C6FC88 /* OPConversionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPConversionService.swift; sourceTree = "<group>"; };
 		D802C1A022F2266000C6FC88 /* OPWeatherApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPWeatherApi.swift; sourceTree = "<group>"; };
 		D802C1A122F2266000C6FC88 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				D802C1A122F2266000C6FC88 /* URLSessionProtocol.swift */,
 				D802C1BE22F22CE000C6FC88 /* OPStoryBoard.swift */,
 				D802C1D422F2506600C6FC88 /* OPAlertViewController.swift */,
+				64E78FD922F2ECB90062B737 /* OPCellAnimation.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				64E78FD222F2E48C0062B737 /* OPCity.swift in Sources */,
 				64E78FD422F2E48C0062B737 /* OPCitySearchCell.swift in Sources */,
 				D802C1BC22F2266100C6FC88 /* OPCitiesListTableCell.swift in Sources */,
+				64E78FDA22F2ECB90062B737 /* OPCellAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

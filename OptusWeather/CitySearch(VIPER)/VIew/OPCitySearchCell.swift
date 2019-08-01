@@ -19,15 +19,5 @@ class OPCitySearchCell: UITableViewCell {
         backgroundColorView.layer.cornerRadius = 5.0
         backgroundColorView.layer.backgroundColor = bubbleColor.cgColor
     }
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
 
 }

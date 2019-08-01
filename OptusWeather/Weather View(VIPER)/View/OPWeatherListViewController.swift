@@ -9,28 +9,8 @@
 import UIKit
 
 class OPWeatherListViewController: UITableViewController, OPWeatherListViewProtocol {
+    
     private var activity = OPActivityView()
-    
-    func showWeatherInformation(with info: [OPWeather]) {
-        weatherInfo += info
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-            self.activity.removeActivity()
-        }
-    }
-    func fetchWeatherInfo(for Cities: [String]) {
-        DispatchQueue.main.async {
-            self.activity.showActivityIndicatory(view: self.view, "Fetching Weather Info")
-        }
-        self.presenter?.fetchWeatherInformation(cities: Cities)
-    }
-    func removeActivityView() {
-        DispatchQueue.main.async {
-            self.activity.removeActivity()
-        }
-    }
-    
-
     private var weatherInfo = [OPWeather]()
     var presenter: OPWeatherListPresenterProtocol?
     var timers: Timer?
@@ -106,8 +86,34 @@ class OPWeatherListViewController: UITableViewController, OPWeatherListViewProto
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.animateCell(scale: 0.8)
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         presenter?.sendDataToWeatherDetailView(info: weatherInfo[indexPath.row])
+    }
+}
+
+
+extension OPWeatherListViewController {
+    func showWeatherInformation(with info: [OPWeather]) {
+        weatherInfo += info
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            self.activity.removeActivity()
+        }
+    }
+    func fetchWeatherInfo(for Cities: [String]) {
+        DispatchQueue.main.async {
+            self.activity.showActivityIndicatory(view: self.view, "Fetching Weather Info")
+        }
+        self.presenter?.fetchWeatherInformation(cities: Cities)
+    }
+    func removeActivityView() {
+        DispatchQueue.main.async {
+            self.activity.removeActivity()
+        }
     }
 }

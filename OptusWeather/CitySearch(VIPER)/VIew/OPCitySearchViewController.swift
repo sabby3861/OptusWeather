@@ -57,6 +57,7 @@ extension OPCitySearchViewController: UITableViewDelegate {
         }
         self.navigationController?.popViewController(animated: true)
     }
+  
 }
 
 extension OPCitySearchViewController: UITableViewDataSource {
@@ -76,6 +77,10 @@ extension OPCitySearchViewController: UITableViewDataSource {
         }
         cell.updateCell(city: city)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.animateCell(scale: 0.5)
     }
 }
 

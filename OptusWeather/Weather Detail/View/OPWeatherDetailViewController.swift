@@ -12,10 +12,8 @@ class OPWeatherDetailViewController: UIViewController {
     
     @IBOutlet weak var refreshDateLabel: UILabel!
     var weather: OPWeather?
-    
-    
-    
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLastRefreshDate()
@@ -72,5 +70,9 @@ extension OPWeatherDetailViewController: UITableViewDataSource {
         }
         cell.updateCell(data: weatherInfo)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.animateCell(scale: 0.7)
     }
 }
