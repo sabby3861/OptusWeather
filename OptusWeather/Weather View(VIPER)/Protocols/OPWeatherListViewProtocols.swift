@@ -11,6 +11,7 @@ protocol OPWeatherListViewProtocol: class
 {
     var presenter: OPWeatherListPresenterProtocol? { get }
     func showWeatherInformation(with info: [OPWeather])
+    func fetchWeatherInfo(for Cities: [String])
     func removeActivityView()
 }
 
@@ -20,7 +21,8 @@ protocol OPWeatherListPresenterProtocol: class
     var view: OPWeatherListViewProtocol? { get }
     var router: OPWeatherListRouterProtocol? { get }
     var interactor: OPWeatherListInteractorProtocol?{get}
-    func fetchWeatherInformation()
+    func fetchWeatherInformation(cities: [String])
+    func openCitySearchView()
     func sendDataToWeatherDetailView(info: OPWeather)
 }
 
@@ -29,7 +31,7 @@ protocol OPWeatherListPresenterProtocol: class
 protocol OPWeatherListInteractorProtocol: class
 {
     var output: OPWeatherListOutputProtocol? { get }
-    func decodeJSONInformation()
+    func decodeJSONInformation(cities: [String])
 }
 
 protocol OPWeatherListOutputProtocol: class
@@ -44,4 +46,5 @@ protocol OPWeatherListRouterProtocol: class
     var viewController: OPWeatherListViewController? { get}
     static func assembleModule(view: OPWeatherListViewController)
     func showWeatherDetailView(with Info: OPWeather)
+    func showCitySearchView()
 }

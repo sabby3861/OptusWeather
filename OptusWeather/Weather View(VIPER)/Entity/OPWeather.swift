@@ -26,7 +26,7 @@ struct OPMultiWeatherInfo: Codable {
     }
     
     // MARK: - Objects
-    var id: Int32?
+    var id: Int
     var visibility: Int32?
     var name: String?
     var main: OPMain?
@@ -38,7 +38,7 @@ struct OPMultiWeatherInfo: Codable {
     // MARK: - Decodable
      init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        if let id = try container.decodeIfPresent(Int32.self, forKey: .id) {
+        if let id = try container.decodeIfPresent(Int.self, forKey: .id) {
             self.id = id
         } else {
             self.id = 0

@@ -31,4 +31,10 @@ class OPWeatherListRouter: OPWeatherListRouterProtocol {
         viewController?.navigationController?.pushViewController(view, animated: true)
     }
     
+    func showCitySearchView(){
+        let storyboard = UIStoryboard.storyboard(storyboard: .Main)
+        let view: OPCitySearchViewController = storyboard.instantiateVieController()
+        OPCitySearchRouter.assembleModule(view: view, weatherView: viewController)
+        viewController?.navigationController?.pushViewController(view, animated: true)
+    }
 }

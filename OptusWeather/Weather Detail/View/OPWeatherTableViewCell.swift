@@ -38,8 +38,8 @@ class OPWeatherTableViewCell: UITableViewCell {
         let bubbleColor: UIColor =  .nearbyWeatherStandard
         backgroundColorView.layer.cornerRadius = 5.0
         backgroundColorView.layer.backgroundColor = bubbleColor.cgColor
-        minTempLabel.text = ("          Min Temp:          \(data.main?.minTemp ?? 0) °C")
-        maxTempLabel.text = ("          Max Temp:          \(data.main?.maxTemp ?? 0) °C")
+        minTempLabel.text = ("        Min Temp:          \(data.main?.minTemp ?? 0) °C")
+        maxTempLabel.text = ("        Max Temp:          \(data.main?.maxTemp ?? 0) °C")
         humidityLabel.text = "\(data.main?.humidity ?? 0)%"
         windspeedLabel.text = "\(data.windInformation.windspeed)"
         cloudCoverageLabel.text = "\(data.cloudCoverage.coverage)%"

@@ -44,8 +44,13 @@ protocol OPWeatherApiProtocol {
 }
 
  protocol OPWeatherApiWeatherProtocol {
-    func getWeatherFor(lat: String, lon: String, completion: @escaping (Result<OPWeather>) -> Void)
     func getWeatherFor(cityId id: [String], completion: @escaping (Result<OPMultiWeatherInfo>) -> Void)
+}
+
+enum ReachabilityStatus {
+    case unknown
+    case disconnected
+    case connected
 }
 
 /**
@@ -62,7 +67,11 @@ public class OPWeatherApi: OPWeatherApiProtocol {
     var urlSession: URLSessionProtocol
     /// defaultParameters added to all query
     var defaultParameters: [URLQueryItem] = []
-    
+    /// Data Task
+    private var task: URLSessionDataTask?
+    // Reachability to check the internet
+    private let reachabilityManager: NetworkReachabilityManager?
+    private(set) var reachabilityStatus: ReachabilityStatus
     /**
      Init kit
      
@@ -73,6 +82,41 @@ public class OPWeatherApi: OPWeatherApiProtocol {
         self.key = key
         self.urlSession = urlSession
         self.defaultParameters.append(URLQueryItem(name: "APPID", value: key))
+        self.reachabilityManager = NetworkReachabilityManager()
+        self.reachabilityStatus = .unknown
+        
+        beginListeningNetworkReachability()
+    }
+    
+    deinit {
+        reachabilityManager?.stopListening()
+    }
+    
+    /*
+    Reachability
+    
+    - Start the reachability
+    */
+    func beginListeningNetworkReachability() {
+        reachabilityManager?.listener = { status in
+            switch status {
+            case .unknown: self.reachabilityStatus = .unknown
+            case .notReachable:
+                self.reachabilityStatus = .disconnected
+                self.showErrorForNoNetwork()
+            case .reachable(.ethernetOrWiFi), .reachable(.wwan): self.reachabilityStatus = .connected
+            }
+            
+        }
+        reachabilityManager?.startListening()
+    }
+    
+    func showErrorForNoNetwork()  {
+        task?.suspend()
+        DispatchQueue.main.async {
+            NotificationCenter.default.post(name: Notification.Name(rawValue: kNetworkReachabilityChanged), object: self)
+            OPAlertViewController.showAlert(withTitle: "Error", message:  "No Network Connection, Please connect to the internet")
+        }
     }
     
     /**
@@ -104,12 +148,10 @@ public class OPWeatherApi: OPWeatherApiProtocol {
     private func send<T: Codable>(to endpoint: String, with parameters: [String], completion: @escaping (Result<T>) -> Void) {
         var urlComponents = URLComponents(string: "\(getEndpoint())\(endpoint)")!
         urlComponents.queryItems = defaultParameters
-        /*for (key, value) in parameters {
-            urlComponents.queryItems?.append(URLQueryItem(name: key, value: (String(describing: value))))
-        }*/
+ 
         let idParametr = parameters.joined(separator: ",")
         urlComponents.queryItems?.append(URLQueryItem(name: "id", value: (String(describing: idParametr))))
-        urlSession.dataTask(with: urlComponents.url!) { data, response, error in
+        task = urlSession.dataTask(with: urlComponents.url!) { data, response, error in
             guard let data = data else {
                 completion(Result.error(OPWeatherError.invalidData))
                 return
@@ -121,7 +163,8 @@ public class OPWeatherApi: OPWeatherApiProtocol {
             } catch let error {
                 completion(Result.error(error))
             }
-            }.resume()
+            }
+        task?.resume()
     }
 }
 
@@ -131,19 +174,9 @@ public class OPWeatherApi: OPWeatherApiProtocol {
  */
 extension OPWeatherApi: OPWeatherApiWeatherProtocol {
     /**
-     Retrieve weather by latitude and longitude
-     
-     - Parameter lat: latitude must be between 0 and 90
-     - Parameter lon: longitude must be between -180 and 180
-     - Parameter completion: Result of api call
-     */
-    func getWeatherFor(lat: String, lon: String, completion: @escaping (Result<OPWeather>) -> Void) {
-        //send(to: "weather", with: ["lat": lat, "lon": lon], completion: completion)
-    }
-    /**
      Retrieve weather by OpenWeatherMap city ID
      
-     - Parameter id:  internal id of OpenWeatherMap
+     - Parameter id:  internal ids as Array of OpenWeatherMap
      - Parameter completion: Result of api call
      - Remark: City id can be found : http://openweathermap.org/help/city_list.txt or in response result
      */

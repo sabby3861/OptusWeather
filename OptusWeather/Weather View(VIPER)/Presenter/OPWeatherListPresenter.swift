@@ -12,19 +12,23 @@ class OPWeatherListPresenter: OPWeatherListPresenterProtocol {
     var router: OPWeatherListRouterProtocol?
     var interactor: OPWeatherListInteractorProtocol?
     
-    func fetchWeatherInformation() {
-        interactor?.decodeJSONInformation()
+    func fetchWeatherInformation(cities: [String]) {
+        interactor?.decodeJSONInformation(cities: cities)
     }
     
     func sendDataToWeatherDetailView(info: OPWeather) {
         router?.showWeatherDetailView(with: info)
+    }
+    
+    func openCitySearchView() {
+        router?.showCitySearchView()
     }
 }
 
 // MARK: - Presenter to view communcation
 extension OPWeatherListPresenter: OPWeatherListOutputProtocol{
     func errorOccured() {
-        
+        view?.removeActivityView()
     }
     func weatherInfoDidFetch(weatherInfo: [OPWeather]) {
         view?.showWeatherInformation(with: weatherInfo)

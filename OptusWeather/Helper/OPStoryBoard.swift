@@ -46,3 +46,4 @@ extension StoryboardIdentifiable where Self: UIViewController {
 
 extension UIViewController: StoryboardIdentifiable{}
 let kWeatherDataLastRefreshDateKey = "techm.weatherDataService.lastUpdateDate"
+let kNetworkReachabilityChanged = "techm.nearbyWeather.networkReachabilityChanged"

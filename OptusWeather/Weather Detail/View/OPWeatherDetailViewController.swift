@@ -74,13 +74,3 @@ extension OPWeatherDetailViewController: UITableViewDataSource {
         return cell
     }
 }
-
-
-extension UITableView {
-    func addCellIdentifiers(_ identifiers:[String]) {
-        for identifier in identifiers {
-            let nib = UINib.init(nibName: identifier, bundle: nil)
-            register(nib, forCellReuseIdentifier: identifier)
-        }
-    }
-}
