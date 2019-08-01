@@ -12,7 +12,12 @@ protocol OPAlertDelegate {
     func alert(buttonClickedIndex:Int, buttonTitle: String, tag: Int)
 }
 
-class OPAlertViewController: NSObject {
+protocol OPActivityViewProtocol {
+    func showActivityIndicatory(view: UIView, _ title: String)
+    func removeActivity()
+}
+
+class OPAlertViewController {
     
     class func showAlert(withTitle title: String, message:String, buttons:[String] = ["Ok"], delegate: OPAlertDelegate? = nil, tag: Int = 0){
         
@@ -40,7 +45,7 @@ class OPAlertViewController: NSObject {
 }
 
 
-class OPActivityView: NSObject{
+class OPActivityView: OPActivityViewProtocol {
     lazy var activityIndicator = UIActivityIndicatorView()
     lazy var strLabel = UILabel()
     let effectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
