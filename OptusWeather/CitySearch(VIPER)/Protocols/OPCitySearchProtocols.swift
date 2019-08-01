@@ -22,7 +22,6 @@ protocol OPCitySearchPresenterProtocol: class
     var router: OPCitySearchRouterProtocol? { get }
     var interactor: OPCitySearchInteractorProtocol?{get}
     func fetchCityInformation()
-    func sendDataToWeatherDetailView(info: OPCity)
 }
 
 /// Interactor -> Presenter Communication Protocols

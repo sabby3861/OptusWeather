@@ -66,7 +66,8 @@ extension OPCitySearchViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchedCities?.count ?? 0
+        guard let count = searchedCities?.count else { return 0 }
+        return count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "OPCitySearchCell", for: indexPath) as?  OPCitySearchCell else {
@@ -88,10 +89,14 @@ extension OPCitySearchViewController: UITableViewDataSource {
 
 extension OPCitySearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard !searchText.isEmpty else {
+            return
+        }
         searchedCities = nil
-        searchedCities = searchText.isEmpty ? searchedCities : cities?.filter { city in
+        let filteredData = cities?.filter { city in
             return city.name.lowercased().contains(searchText.lowercased())
         }
+        searchedCities = filteredData
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }

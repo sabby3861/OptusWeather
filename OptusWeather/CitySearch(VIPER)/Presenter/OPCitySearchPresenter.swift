@@ -10,17 +10,12 @@ import Foundation
 
 class OPCitySearchPresenter: OPCitySearchPresenterProtocol {
     var router: OPCitySearchRouterProtocol?
-    var view: OPCitySearchViewProtocol?
+    weak var view: OPCitySearchViewProtocol?
     var interactor: OPCitySearchInteractorProtocol?
     
     func fetchCityInformation() {
         interactor?.decodeJSONInformation()
     }
-    
-    func sendDataToWeatherDetailView(info: OPCity) {
-        
-    }
-    
     
 }
 
@@ -32,6 +27,5 @@ extension OPCitySearchPresenter: OPCitySearchOutputProtocol {
     func errorOccured() {
         view?.removeActivityView()
     }
-    
     
 }
