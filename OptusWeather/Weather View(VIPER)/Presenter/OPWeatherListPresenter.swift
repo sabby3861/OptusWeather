@@ -8,7 +8,7 @@
 
 import Foundation
 class OPWeatherListPresenter: OPWeatherListPresenterProtocol {
-    var view: OPWeatherListViewProtocol?
+    weak var view: OPWeatherListViewProtocol?
     var router: OPWeatherListRouterProtocol?
     var interactor: OPWeatherListInteractorProtocol?
     
