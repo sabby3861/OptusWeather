@@ -10,14 +10,14 @@ import UIKit
 
 class OPCitySearchViewController: UIViewController, OPCitySearchViewProtocol {
     
-    var presenter: OPCitySearchPresenterProtocol?
+    weak var presenter: OPCitySearchPresenterProtocol?
     var weatherView: OPWeatherListViewProtocol?
     private var activity = OPActivityView()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-    var cities: [OPCity]?
-    var searchedCities: [OPCity]?
+    private var cities: [OPCity]?
+    private var searchedCities: [OPCity]?
     
     override func viewDidLoad() {
         super.viewDidLoad()

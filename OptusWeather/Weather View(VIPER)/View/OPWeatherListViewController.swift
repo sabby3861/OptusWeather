@@ -12,9 +12,9 @@ class OPWeatherListViewController: UITableViewController, OPWeatherListViewProto
     
     private var activity = OPActivityView()
     private var weatherInfo = [OPWeather]()
-    var presenter: OPWeatherListPresenterProtocol?
-    var timers: Timer?
-    var timer: DispatchSourceTimer!
+    weak var presenter: OPWeatherListPresenterProtocol?
+    private var timer: DispatchSourceTimer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
